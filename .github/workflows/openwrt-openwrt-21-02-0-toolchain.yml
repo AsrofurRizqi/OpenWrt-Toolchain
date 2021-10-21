@@ -65,7 +65,7 @@ jobs:
         run: |
           svn co https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
           svn co https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
-          
+          cat script/Makefile >> $OPENWRTROOT/tools/Makefile
 
       - name: Download Packages
         env:
