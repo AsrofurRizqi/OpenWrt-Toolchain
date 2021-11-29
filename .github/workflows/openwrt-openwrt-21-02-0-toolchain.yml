@@ -63,8 +63,8 @@ jobs:
       - name: Custom Tools Package
         id: custom
         run: |
-          svn co https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
-          svn co https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
+          svn co https://github.com/coolsnowwolf/lede/trunk/tools/ucl $OPENWRTROOT/tools/ucl
+          svn co https://github.com/coolsnowwolf/lede/trunk/tools/upx $OPENWRTROOT/tools/upx
           cat script/Makefile >> $OPENWRTROOT/tools/Makefile
 
       - name: Download Packages
