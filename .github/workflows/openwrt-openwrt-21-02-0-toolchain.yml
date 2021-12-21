@@ -112,7 +112,7 @@ jobs:
       - name: Generate Toolchain Image
         id: generate
         run: |
-          export FILE_NAME="toolchain-image-$REPO_USER-$REPO_NAME-$REPO_BRANCH-$TARGET-$SUBTARGET.img"
+          export FILE_NAME="toolchain-image-$REPO_BRANCH-$TARGET-$SUBTARGET.img"
           mksquashfs openwrt $FILE_NAME -force-gid 1001 -force-uid 1001 -comp xz
           mkdir output
           mv $FILE_NAME output
